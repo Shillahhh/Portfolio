@@ -1,0 +1,530 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1A2421;
+    color: #E0FFFF;
+}
+
+/* HEADER SECTION */
+#header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: crimson;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #E0FFFF;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    width: 80%;
+    left: 100px;
+}
+
+.details{
+    position: relative;
+    width: 50%;
+    padding: 10px 20px;
+}
+
+.header-img{
+    border: 5px solid #1A2421;
+    border-radius: 50%;
+    box-shadow: 2px 5px 10px 10px crimson;
+}
+
+.header-img:hover{
+transform: rotate(360deg); /* Adjust the degree as needed */
+  transition: transform 2s ease; /* Smooth transition */
+}
+
+.header-details{
+    font-size: 2.5rem;
+    color: crimson;
+    animation: slidein 2s ease-out;
+}
+
+@keyframes slidein{
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      80% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+
+
+h2{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-cv{
+    padding: 10px 20px;
+    font-weight: bolder;
+    border-radius: 22px;
+}
+
+.btn-cv:hover{
+    background-color: crimson;
+    transition: 1s;
+}
+
+.showLinks{
+    display: none;
+}
+
+.hideLinks{
+    display: none;
+}
+
+/* PHONE RESPONSIVENESS FOR THE HEADER */
+@media only screen and (max-width: 500px){
+    #header {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 10px 20px;
+    }
+   
+    .showLinks{
+        position: absolute;
+        display: block;
+        top: 10px;
+        right: 20%;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .hideLinks{
+        position: fixed;
+        display: block;
+        color: white;
+        top: 0;
+        padding: 10px 20px;
+
+    }
+
+    .nav{
+        display: none;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    .nav.active{
+        display: block;
+        transition: 0.5s;
+    }
+
+
+    .nav ul li{
+    display: block;
+    padding: 10px 20px;
+    }
+
+    .nav ul li a{
+        display: block;
+        color: white;
+        margin-top: 20%;
+    }
+ 
+    
+    .show-nav{
+        display: block;
+        position: relative;
+        
+    }
+
+    .content{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10%;
+        width: 100%;
+        left: -30px;
+    }
+    
+    .header-details{
+        font-size: 1.6rem;
+        color: crimson;
+        animation: slidein 2s ease-out;
+    }
+    .details{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    .header-img{
+        position: relative;
+        border: 5px solid #1A2421;
+        border-radius: 50%;
+        margin-top: 20px;
+        left: 10%;
+        box-shadow: 2px 5px 10px 10px crimson;
+    }
+
+    h2{
+        font-size: 1rem;
+        line-height: 1.4rem;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+  }
+
+/* ABOUT ME SECTION */
+
+#aboutSection{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 20px;
+    color:crimson;
+}
+
+.contents{
+    position: relative;
+    color: #E0FFFF;
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin: 30px auto 0;
+    display: flex;
+    gap: 30px;
+    padding: 10px 20px;
+}
+
+.contents img{
+    width: 400px;
+    height: 400px;
+    padding: 0px;
+}
+
+.contents .right{
+    padding: 5px 10px;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #E0FFFF;
+}
+
+/* ABOUT PHONE RESPONSIVENESS */
+@media only screen and (max-width: 500px){
+    .title{
+        text-align: center;
+    }
+    
+    .contents{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        left: -40px;
+        padding: 10px 20px;
+    }
+    
+    .contents img{
+        position: relative;
+        width: 90%;
+        height: 90%;
+        padding: 10px;
+        left: 25px;
+        
+    }
+    
+    .contents .right{
+        position: relative;
+        padding: 5px 10px;
+        margin-top: 30px;
+        font-size: 1rem;
+        left: 24px;
+        line-height: 1.4rem;
+        color: #E0FFFF;
+    }
+
+}
+
+/* PROJECTS SECTION */
+
+#projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    font-size: 2.4rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: crimson;
+    margin-top: 40px;
+    padding: 10px 20px;
+}
+
+.samples{
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    width: 80%;
+    left: 10%;
+    gap: 20%;
+
+}
+
+.btn-web{
+    padding: 10px 20px;
+    border-radius: 22px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 500px){
+    .title{
+        position: relative;
+        font-size: 2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        color: crimson;
+        left: -24px;
+        margin-top: 40px;
+        padding: 10px 20px;
+    }
+    
+    .samples{
+        position: relative;
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        left: 15%;
+        gap: 10%;
+    
+    }
+    
+    .btn-web{
+        padding: 5px 10px;
+        border-radius: 22px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 0.7rem;
+    }
+}
+
+/* FORM SECTION */
+form{
+    width:40%;
+    height: 70%;
+    background-color:black;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px auto 0px;
+    margin-bottom: 20px;
+    box-shadow: 2px 5px 10px 10px crimson;
+}
+
+form label{
+    font-family: 'Courier New', Courier, monospace;
+    color: #E0FFFF;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+}
+
+form input{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 40px;
+    font-size: 1rem;
+    margin: 10px;
+    border-radius: 22px;
+}
+
+form textarea{
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+form textarea ::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 20px;
+    color: black;
+}
+
+.button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 22px;
+    font-weight: bolder;
+    background-color: white;
+    transition: 1s;
+}
+
+.button:hover{
+  background-color: crimson;
+}
+
+/* CONTACT PHONE RESPONSIVENESS */
+/* FORM PHONE RESPONSIVENESS */
+@media only screen and (max-width: 500px){
+
+  
+    form{
+        position: relative;
+        width:70%;
+        height: 70%;
+        right: 10%;
+        background-color: black;
+        text-align: center;
+        padding: 5px 10px;
+        margin: 0 auto 0;
+        box-shadow: 2px 5px 5px 10px crimson;
+    }
+
+    form label{
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    
+    form input{
+        position: relative;
+        padding: 5px 10px;
+        width: 100%;
+        right: 5%;
+        font-size: 0.8rem;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 10px;
+        border-radius: 22px;
+    }
+    
+    form textarea{
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        width: 100%;
+        right: 10px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1rem;
+    }
+    
+    form textarea ::placeholder{
+        padding: 10px 20px;
+    }
+}
+
+/* FOOTER SECTION */
+#footer-Section{
+    margin-top: 50px;
+    height: 30vh;
+    width: 100%;
+    background-color:crimson;
+}
+
+#footer-Section h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #E0FFFF;
+    font-weight: bolder;
+    padding:10px 20px;
+}
+
+#footer-Section button{
+    padding: 10px 20px;
+    margin-top: 20px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    left: 45%;
+    border-radius: 22px;
+}
+
+@media only screen and (max-width: 500px) {
+    #footer-Section h2{
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        font-size: 0.8rem;
+        right: 10%;
+        color: #E0FFFF;
+        font-weight: bolder;
+        padding:10px 20px;
+    }
+    
+    #footer-Section button{
+        padding: 10px 20px;
+        margin-top: 20px;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        left: 30%;
+        border-radius: 22px;
+    }
+   
+}
